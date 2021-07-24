@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg" alt="">
+  </header>
+  <main>
+    <form class="input-sec">
+      <div>
+        <div class="para">
+          <label for="bill-amount" class="input-sec--para">Bill</label>
+          <p class="input-amount-err error-para"></p>
+        </div>
+        <input type="number" id="amount" name="bill-amount" min="1" placeholder="00.00" class="input-amount">
+      </div>
+      <div>
+        <label for="tip-percentage" class="input-sec--para">Select Tip %</label>
+        <div class="sec-percentage-btns">
+          <button type="button" name="tip-percentage" class="percentage-btn" data-percentage="5">5%</button>
+          <button type="button" name="tip-percentage" class="percentage-btn" data-percentage="10">10%</button>
+          <button type="button" name="tip-percentage" class="percentage-btn" data-percentage="15">15%</button>
+          <button type="button" name="tip-percentage" class="percentage-btn" data-percentage="25">25%</button>
+          <button type="button" name="tip-percentage" class="percentage-btn" data-percentage="50">50%</button>
+          <input type="number" name="tip-percentage" class="custom-percentage" placeholder="Custom" min="1">
+        </div>
+      </div>
+      <div>
+        <div class="para">
+          <label for="" class="input-sec--para">Number of People</label>
+          <p class="input-people-err error-para"></p>
+        </div>
+        <input type="number" name="people" id="no-people" class="input-people" value="1" min="1">
+      </div>
+    </form>
+    <div class="render-sec">
+
+      <div class="render-sec--display">
+        <div class="">
+          <p class="render-sec--para">Tip Amount</p>
+          <p class="render-sec--person">/ person</p>
+        </div>
+        <div class="tip-amount">$00.00</div>
+      </div>
+
+
+      <div class="render-sec--display">
+        <div class="">
+          <p class="render-sec--para">Total</p>
+          <p class="render-sec--person">/ person</p>
+        </div>
+        <div class="per-person">$00.00</div>
+      </div>
+
+      <button type="button" name="button" class="reset">Reset</button>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
